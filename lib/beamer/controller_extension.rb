@@ -12,7 +12,7 @@ module Beamer
       }.merge(args.extract_options!)
 
 
-      presenter = options[:class].new(object, view) if options[:class]
+      presenter = options[:class].new(object, view_context) if options[:class]
 
       presenter ||= begin
                       loader_module = "Beamer::Loader"
