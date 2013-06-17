@@ -4,7 +4,7 @@ module Beamer
     class LoadByClassName < Base
 
       def load_presenter
-        klass = "#{object.class.name}Presenter".safe_constantize
+        klass = "#{object.class.name}Presenter".constantize
         klass.new(object, view_context) if klass
       end
 
